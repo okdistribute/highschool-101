@@ -1,0 +1,37 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+</head>
+<body>
+
+
+  <script id='workspace' type='text/ractive'>
+
+
+    <p>Hello, {{name}}!</p>
+    <p>You are {{age}} years old </p>
+
+  </script>
+
+
+
+<script src='http://cdn.ractivejs.org/latest/ractive.js'></script>
+<script type="text/javascript">
+  value = prompt("whats your name?")
+  age = prompt("whats your age?")
+
+  var ractive = new Ractive({
+    // The `el` option can be a node, an ID, or a CSS selector.
+    el: 'body',
+    template: '#workspace',
+    data: { name: value, age: age }
+  });
+
+
+</script>
+
+
+
+
+</body>
+</html>
